@@ -1,0 +1,61 @@
+body {
+    background-color: #161616;
+    margin: 0;
+    height: 100vh;
+    display: grid;
+    place-content: center center;
+}
+
+.spinner {
+    background: #f5dad8;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 200px;
+    aspect-ratio: 1;
+    animation: rotate 6s linear infinite;
+}
+
+.spinner img {
+    display: block;
+    width: 100%;
+    animation: bounce .2s linear infinite alternate;
+}
+
+/* Ocultar los controles del audio */
+audio::-webkit-media-controls {
+    display: none !important;
+}
+
+audio::-webkit-media-controls-enclosure {
+    display: none !important;
+}
+
+audio::-webkit-media-controls-panel {
+    display: none !important;
+}
+
+audio::-webkit-media-controls-play-button {
+    display: none !important;
+}
+
+audio::-webkit-media-controls-start-playback-button {
+    display: none !important;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(-5%);
+    }
+    to {
+        transform: translateY(10%);
+    }
+}
